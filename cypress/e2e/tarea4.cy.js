@@ -25,7 +25,9 @@ describe('template spec', () => {
     cy.visit('https://www.santaisabel.cl')
     cy.get('.categories-dropdown-button').click()
     cy.get('a[href="/lacteos"]').click()
-    cy.get('.title-with-bar-text').should('contain','Lácteos')
+    cy.get('a[href="/lacteos/leches"]').click()
+    cy.get('.title-with-bar-text').should('contain', 'Leches')
+    
   })
 
 })
